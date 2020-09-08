@@ -1,9 +1,9 @@
-package com.cy.gulimall.memeber.controller;
+package com.cy.gulimall.member.controller;
 
 import java.util.Arrays;
 import java.util.Map;
 
-import org.apache.shiro.authz.annotation.RequiresPermissions;
+//import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -11,8 +11,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.cy.gulimall.memeber.entity.MemberCollectSpuEntity;
-import com.cy.gulimall.memeber.service.MemberCollectSpuService;
+import com.cy.gulimall.member.entity.MemberCollectSpuEntity;
+import com.cy.gulimall.member.service.MemberCollectSpuService;
 import com.cy.common.utils.PageUtils;
 import com.cy.common.utils.R;
 
@@ -23,10 +23,10 @@ import com.cy.common.utils.R;
  *
  * @author chenshun
  * @email sunlightcs@gmail.com
- * @date 2020-09-04 20:56:42
+ * @date 2020-09-08 10:15:50
  */
 @RestController
-@RequestMapping("memeber/membercollectspu")
+@RequestMapping("member/membercollectspu")
 public class MemberCollectSpuController {
     @Autowired
     private MemberCollectSpuService memberCollectSpuService;
@@ -35,7 +35,7 @@ public class MemberCollectSpuController {
      * 列表
      */
     @RequestMapping("/list")
-    @RequiresPermissions("memeber:membercollectspu:list")
+    //@RequiresPermissions("member:membercollectspu:list")
     public R list(@RequestParam Map<String, Object> params){
         PageUtils page = memberCollectSpuService.queryPage(params);
 
@@ -47,7 +47,7 @@ public class MemberCollectSpuController {
      * 信息
      */
     @RequestMapping("/info/{id}")
-    @RequiresPermissions("memeber:membercollectspu:info")
+    //@RequiresPermissions("member:membercollectspu:info")
     public R info(@PathVariable("id") Long id){
 		MemberCollectSpuEntity memberCollectSpu = memberCollectSpuService.getById(id);
 
@@ -58,7 +58,7 @@ public class MemberCollectSpuController {
      * 保存
      */
     @RequestMapping("/save")
-    @RequiresPermissions("memeber:membercollectspu:save")
+    //@RequiresPermissions("member:membercollectspu:save")
     public R save(@RequestBody MemberCollectSpuEntity memberCollectSpu){
 		memberCollectSpuService.save(memberCollectSpu);
 
@@ -69,7 +69,7 @@ public class MemberCollectSpuController {
      * 修改
      */
     @RequestMapping("/update")
-    @RequiresPermissions("memeber:membercollectspu:update")
+    //@RequiresPermissions("member:membercollectspu:update")
     public R update(@RequestBody MemberCollectSpuEntity memberCollectSpu){
 		memberCollectSpuService.updateById(memberCollectSpu);
 
@@ -80,7 +80,7 @@ public class MemberCollectSpuController {
      * 删除
      */
     @RequestMapping("/delete")
-    @RequiresPermissions("memeber:membercollectspu:delete")
+    //@RequiresPermissions("member:membercollectspu:delete")
     public R delete(@RequestBody Long[] ids){
 		memberCollectSpuService.removeByIds(Arrays.asList(ids));
 

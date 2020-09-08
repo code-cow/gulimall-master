@@ -1,4 +1,4 @@
-package com.cy.gulimall.memeber.service.impl;
+package com.cy.gulimall.member.service.impl;
 
 import org.springframework.stereotype.Service;
 import java.util.Map;
@@ -8,9 +8,9 @@ import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.cy.common.utils.PageUtils;
 import com.cy.common.utils.Query;
 
-import com.cy.gulimall.memeber.dao.MemberLoginLogDao;
-import com.cy.gulimall.memeber.entity.MemberLoginLogEntity;
-import com.cy.gulimall.memeber.service.MemberLoginLogService;
+import com.cy.gulimall.member.dao.MemberLoginLogDao;
+import com.cy.gulimall.member.entity.MemberLoginLogEntity;
+import com.cy.gulimall.member.service.MemberLoginLogService;
 
 
 @Service("memberLoginLogService")

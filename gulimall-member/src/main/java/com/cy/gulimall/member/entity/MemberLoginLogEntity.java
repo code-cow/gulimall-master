@@ -1,4 +1,4 @@
-package com.cy.gulimall.memeber.entity;
+package com.cy.gulimall.member.entity;
 
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
@@ -12,7 +12,7 @@ import lombok.Data;
  * 
  * @author chenshun
  * @email sunlightcs@gmail.com
- * @date 2020-09-04 20:56:42
+ * @date 2020-09-08 10:15:50
  */
 @Data
 @TableName("ums_member_login_log")
